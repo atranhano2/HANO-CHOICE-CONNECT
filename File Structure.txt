@@ -1,0 +1,14 @@
+housing-choice-connect/
+├─ index.html
+├─ login.html
+├─ tenants.html
+├─ landlords.html
+├─ property.html
+├─ assets/
+│  ├─ css/
+│  │  └─ styles.css
+│  ├─ js/
+│  │  └─ app.js
+│  └─ img/
+│     ├─ sample-property.jpg
+│     └─ housing-logo.png

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Housing Choice Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="civic-header">
+      <div class="utility-bar">
+        <div class="utility-left">
+          <span>📞 Housing Assistance Hotline: (504) 555‑1212</span>
+        </div>
+        <div class="utility-right">
+          <a href="#">Español</a>
+          <a href="#">العربية</a>
+          <a href="#">繁體中文</a>
+        </div>
+      </div>
+
+      <nav class="civic-nav">
+        <div class="nav-brand">
+          <img
+            src="assets/img/housing-logo.png"
+            alt="Agency Logo"
+            class="agency-logo"
+          />
+          <div class="agency-title">
+            Housing Choice Connect<br />
+            <span class="agency-subtitle">A Service of the Housing Authority</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tenants.html">Tenants</a>
+          <a href="landlords.html">Landlords</a>
+          <a href="#">Programs</a>
+          <a href="#">Resources</a>
+        </div>
+
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline">Sign in</a>
+          <a href="login.html#register" class="btn btn-primary">Create account</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>
+            A modern bridge between
+            <span>Tenants, Landlords, and Housing Choice</span>
+          </h1>
+          <p class="hero-subtitle">
+            Housing Choice Connect lets voucher holders and participating landlords
+            coordinate in one place—view listings, share details, and keep
+            everything tied to verified Entity IDs.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">Entity ID–based accounts</span>
+            <span class="badge">Tenant-friendly listing views</span>
+            <span class="badge">Landlord property posting</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="tenants.html" class="btn btn-primary">Browse properties</a>
+            <a href="landlords.html" class="btn btn-outline">Post a property</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>• Demo interface (front-end only)</span>
+            <span>• Designed for GitHub Pages deployment</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-card-header">
+              <span class="hero-pill">Live snapshot</span>
+              <span class="hero-card-title">Housing Choice activity</span>
+            </div>
+            <div class="hero-card-metric">
+              Active listings
+              <br />
+              <strong id="hero-listing-count">0</strong>
+            </div>
+            <div class="hero-card-grid">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Average rent</div>
+                <div class="hero-stat-value" id="hero-avg-rent">$0</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Accessible units</div>
+                <div class="hero-stat-value">Highlighted in search</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Tenant accounts</div>
+                <div class="hero-stat-value">Entity ID required</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Landlord accounts</div>
+                <div class="hero-stat-value">Verified entities</div>
+              </div>
+            </div>
+            <div class="hero-card-footer">
+              <span>Powered by local demo data</span>
+              <span style="color:#22c55e;">Front-end prototype</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="section-title">How it works</div>
+          <div class="section-subtitle">
+            Simple flows for both Tenants and Landlords, anchored by Entity IDs.
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Tenants</div>
+              <span class="card-tag">Voucher holders</span>
+            </div>
+            <div class="card-body">
+              Create a Tenant account with your Entity ID, then browse properties
+              with clear pricing, bedroom counts, and descriptions.
+            </div>
+            <div class="card-footer">
+              <a href="tenants.html" class="btn btn-outline">View tenant portal</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Landlords</div>
+              <span class="card-tag">Participating owners</span>
+            </div>
+            <div class="card-body">
+              Register as a Landlord using your Entity ID, then post properties,
+              upload images, and keep details up to date.
+            </div>
+            <div class="card-footer">
+              <a href="landlords.html" class="btn btn-outline">Open landlord portal</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Program alignment</div>
+              <span class="card-tag">Housing Choice</span>
+            </div>
+            <div class="card-body">
+              This interface is designed to sit alongside Housing Choice programs,
+              making it easier to surface units that meet voucher requirements.
+            </div>
+            <div class="card-footer">
+              <span>Configurable for local policy</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="civic-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Housing Choice Connect</h4>
+          <p>A service of the Housing Authority.</p>
+          <p>123 Housing Way, New Orleans, LA 70112</p>
+          <p>📞 (504) 555‑1212</p>
+        </div>
+
+        <div>
+          <h4>Programs</h4>
+          <a href="#">Housing Choice Voucher</a><br />
+          <a href="#">Public Housing</a><br />
+          <a href="#">Landlord Participation</a>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Fair Housing</a><br />
+          <a href="#">ADA Accessibility</a><br />
+          <a href="#">Language Assistance</a>
+        </div>
+
+        <div>
+          <h4>Compliance</h4>
+          <p>Equal Housing Opportunity</p>
+          <p>ADA Accessible</p>
+          <p>© <span id="year"></span> Housing Authority</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+      const props = getProperties();
+      document.getElementById("hero-listing-count").textContent = props.length;
+      if (props.length) {
+        const avg =
+          props.reduce((sum, p) => sum + Number(p.price || 0), 0) / props.length;
+        document.getElementById("hero-avg-rent").textContent =
+          "$" + Math.round(avg).toLocaleString();
+      }
+    </script>
+  </body>
+</html>

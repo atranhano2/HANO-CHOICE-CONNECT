@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Property details • Housing Choice Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="civic-header">
+      <div class="utility-bar">
+        <div class="utility-left">
+          <span>📞 Housing Assistance Hotline: (504) 555‑1212</span>
+        </div>
+        <div class="utility-right">
+          <a href="#">Español</a>
+          <a href="#">العربية</a>
+          <a href="#">繁體中文</a>
+        </div>
+      </div>
+
+      <nav class="civic-nav">
+        <div class="nav-brand">
+          <img
+            src="assets/img/housing-logo.png"
+            alt="Agency Logo"
+            class="agency-logo"
+          />
+          <div class="agency-title">
+            Housing Choice Connect<br />
+            <span class="agency-subtitle">A Service of the Housing Authority</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tenants.html">Tenants</a>
+          <a href="landlords.html">Landlords</a>
+          <a href="#">Programs</a>
+          <a href="#">Resources</a>
+        </div>
+
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div class="section-title">Property details</div>
+          <div class="section-subtitle">
+            A closer look at a single listing, including Entity ID and key
+            attributes.
+          </div>
+        </div>
+        <div id="propertyDetail"></div>
+      </section>
+    </main>
+
+    <footer class="civic-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Housing Choice Connect</h4>
+          <p>A service of the Housing Authority.</p>
+          <p>123 Housing Way, New Orleans, LA 70112</p>
+          <p>📞 (504) 555‑1212</p>
+        </div>
+
+        <div>
+          <h4>Programs</h4>
+          <a href="#">Housing Choice Voucher</a><br />
+          <a href="#">Public Housing</a><br />
+          <a href="#">Landlord Participation</a>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Fair Housing</a><br />
+          <a href="#">ADA Accessibility</a><br />
+          <a href="#">Language Assistance</a>
+        </div>
+
+        <div>
+          <h4>Compliance</h4>
+          <p>Equal Housing Opportunity</p>
+          <p>ADA Accessible</p>
+          <p>© <span id="year"></span> Housing Authority</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+      renderPropertyDetail("propertyDetail");
+    </script>
+  </body>
+</html>

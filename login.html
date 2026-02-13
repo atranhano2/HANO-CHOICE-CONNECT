@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign in • Housing Choice Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="civic-header">
+      <div class="utility-bar">
+        <div class="utility-left">
+          <span>📞 Housing Assistance Hotline: (504) 555‑1212</span>
+        </div>
+        <div class="utility-right">
+          <a href="#">Español</a>
+          <a href="#">العربية</a>
+          <a href="#">繁體中文</a>
+        </div>
+      </div>
+
+      <nav class="civic-nav">
+        <div class="nav-brand">
+          <img
+            src="assets/img/housing-logo.png"
+            alt="Agency Logo"
+            class="agency-logo"
+          />
+          <div class="agency-title">
+            Housing Choice Connect<br />
+            <span class="agency-subtitle">A Service of the Housing Authority</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tenants.html">Tenants</a>
+          <a href="landlords.html">Landlords</a>
+          <a href="#">Programs</a>
+          <a href="#">Resources</a>
+        </div>
+
+        <div class="nav-cta">
+          <a href="login.html" class="btn btn-outline">Sign in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="form-card">
+          <h1 class="form-title">Sign in</h1>
+          <p class="form-subtitle">
+            Use the email and password you registered with.
+          </p>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input
+                id="loginPassword"
+                name="password"
+                type="password"
+                required
+              />
+            </div>
+            <div class="form-error"></div>
+            <button type="submit" class="btn btn-primary" style="margin-top:0.75rem;">
+              Sign in
+            </button>
+          </form>
+        </div>
+
+        <div id="register" class="form-card">
+          <h2 class="form-title">Create an account</h2>
+          <p class="form-subtitle">
+            Choose whether you’re registering as a Tenant or a Landlord. An Entity
+            ID is required.
+          </p>
+
+          <h3 style="font-size:0.95rem; margin-top:0.5rem;">Tenant account</h3>
+          <form id="tenantRegisterForm">
+            <div class="form-group">
+              <label for="tenantName">Full name</label>
+              <input id="tenantName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="tenantEmail">Email</label>
+              <input id="tenantEmail" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="tenantEntityId">Tenant Entity ID</label>
+              <input id="tenantEntityId" name="entityId" required />
+              <div class="form-help">
+                This should match the Entity ID assigned to your Tenant record.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tenantPassword">Password</label>
+              <input
+                id="tenantPassword"
+                name="password"
+                type="password"
+                required
+              />
+            </div>
+            <div class="form-error"></div>
+            <button type="submit" class="btn btn-outline" style="margin-top:0.5rem;">
+              Create Tenant account
+            </button>
+          </form>
+
+          <hr style="margin:1.5rem 0; border-color:rgba(148,163,184,0.3);" />
+
+          <h3 style="font-size:0.95rem;">Landlord account</h3>
+          <form id="landlordRegisterForm">
+            <div class="form-group">
+              <label for="landlordName">Organization or owner name</label>
+              <input id="landlordName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="landlordEmail">Email</label>
+              <input id="landlordEmail" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="landlordEntityId">Landlord Entity ID</label>
+              <input id="landlordEntityId" name="entityId" required />
+              <div class="form-help">
+                This should match the Entity ID assigned to your Landlord record.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="landlordPassword">Password</label>
+              <input
+                id="landlordPassword"
+                name="password"
+                type="password"
+                required
+              />
+            </div>
+            <div class="form-error"></div>
+            <button type="submit" class="btn btn-outline" style="margin-top:0.5rem;">
+              Create Landlord account
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="civic-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Housing Choice Connect</h4>
+          <p>A service of the Housing Authority.</p>
+          <p>123 Housing Way, New Orleans, LA 70112</p>
+          <p>📞 (504) 555‑1212</p>
+        </div>
+
+        <div>
+          <h4>Programs</h4>
+          <a href="#">Housing Choice Voucher</a><br />
+          <a href="#">Public Housing</a><br />
+          <a href="#">Landlord Participation</a>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Fair Housing</a><br />
+          <a href="#">ADA Accessibility</a><br />
+          <a href="#">Language Assistance</a>
+        </div>
+
+        <div>
+          <h4>Compliance</h4>
+          <p>Equal Housing Opportunity</p>
+          <p>ADA Accessible</p>
+          <p>© <span id="year"></span> Housing Authority</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+      handleLogin("loginForm");
+      handleRegister("tenantRegisterForm", "tenant");
+      handleRegister("landlordRegisterForm", "landlord");
+    </script>
+  </body>
+</html>

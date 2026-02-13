@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Landlord portal • Housing Choice Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="civic-header">
+      <div class="utility-bar">
+        <div class="utility-left">
+          <span>📞 Housing Assistance Hotline: (504) 555‑1212</span>
+        </div>
+        <div class="utility-right">
+          <a href="#">Español</a>
+          <a href="#">العربية</a>
+          <a href="#">繁體中文</a>
+        </div>
+      </div>
+
+      <nav class="civic-nav">
+        <div class="nav-brand">
+          <img
+            src="assets/img/housing-logo.png"
+            alt="Agency Logo"
+            class="agency-logo"
+          />
+          <div class="agency-title">
+            Housing Choice Connect<br />
+            <span class="agency-subtitle">A Service of the Housing Authority</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tenants.html">Tenants</a>
+          <a href="landlords.html">Landlords</a>
+          <a href="#">Programs</a>
+          <a href="#">Resources</a>
+        </div>
+
+        <div class="nav-cta">
+          <button id="logoutBtn" class="btn btn-outline">Sign out</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Landlord portal</div>
+            <div class="section-subtitle">
+              Post new properties, attach images, and keep details current. Your
+              Entity ID is attached to each listing.
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2 class="form-title">Post a property</h2>
+          <p class="form-subtitle">
+            Fill in the details below. Tenants will see this in their property
+            list and on the map.
+          </p>
+          <form id="propertyForm">
+            <div class="form-group">
+              <label for="propTitle">Title</label>
+              <input id="propTitle" name="title" required />
+            </div>
+            <div class="form-group">
+              <label for="propAddress">Address</label>
+              <input id="propAddress" name="address" required />
+              <div class="form-help">
+                Used to place the property on the map (via OpenStreetMap).
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propPrice">Monthly rent ($)</label>
+                <input
+                  id="propPrice"
+                  name="price"
+                  type="number"
+                  min="0"
+                  step="50"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="propBeds">Bedrooms</label>
+                <input
+                  id="propBeds"
+                  name="beds"
+                  type="number"
+                  min="0"
+                  step="1"
+                />
+              </div>
+              <div class="form-group">
+                <label for="propBaths">Bathrooms</label>
+                <input
+                  id="propBaths"
+                  name="baths"
+                  type="number"
+                  min="0"
+                  step="0.5"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="propSqft">Square footage</label>
+              <input
+                id="propSqft"
+                name="sqft"
+                type="number"
+                min="0"
+                step="50"
+              />
+            </div>
+            <div class="form-group">
+              <label for="propImage">Image URL (optional)</label>
+              <input
+                id="propImage"
+                name="image"
+                placeholder="https://example.com/property.jpg"
+              />
+              <div class="form-help">
+                If left blank, a default image will be used.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="propDescription">Description</label>
+              <textarea
+                id="propDescription"
+                name="description"
+                placeholder="Highlight accessibility, proximity to transit, and key features."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Accessibility features</label>
+              <div class="chip-row">
+                <label
+                  ><input
+                    type="checkbox"
+                    name="acc"
+                    value="Wheelchair Accessible"
+                  />
+                  Wheelchair Accessible</label
+                >
+                <label
+                  ><input type="checkbox" name="acc" value="Ramp" /> Ramp</label
+                >
+                <label
+                  ><input type="checkbox" name="acc" value="Elevator" />
+                  Elevator</label
+                >
+                <label
+                  ><input type="checkbox" name="acc" value="Grab Bars" /> Grab
+                  Bars</label
+                >
+                <label
+                  ><input type="checkbox" name="acc" value="Wide Doors" /> Wide
+                  Doors</label
+                >
+              </div>
+            </div>
+
+            <div class="form-error"></div>
+            <button type="submit" class="btn btn-primary" style="margin-top:0.75rem;">
+              Post property
+            </button>
+          </form>
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <div class="section-title">Your listings</div>
+            <div class="section-subtitle">
+              Properties you’ve posted under your Landlord Entity ID.
+            </div>
+          </div>
+          <div id="landlordProperties" class="card-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="civic-footer">
+      <div class="footer-grid">
+        <div>
+          <h4>Housing Choice Connect</h4>
+          <p>A service of the Housing Authority.</p>
+          <p>123 Housing Way, New Orleans, LA 70112</p>
+          <p>📞 (504) 555‑1212</p>
+        </div>
+
+        <div>
+          <h4>Programs</h4>
+          <a href="#">Housing Choice Voucher</a><br />
+          <a href="#">Public Housing</a><br />
+          <a href="#">Landlord Participation</a>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Fair Housing</a><br />
+          <a href="#">ADA Accessibility</a><br />
+          <a href="#">Language Assistance</a>
+        </div>
+
+        <div>
+          <h4>Compliance</h4>
+          <p>Equal Housing Opportunity</p>
+          <p>ADA Accessible</p>
+          <p>© <span id="year"></span> Housing Authority</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+      requireRole("landlord");
+      attachLogout("logoutBtn");
+      handlePropertyForm("propertyForm");
+      renderLandlordProperties("landlordProperties");
+    </script>
+  </body>
+</html>
